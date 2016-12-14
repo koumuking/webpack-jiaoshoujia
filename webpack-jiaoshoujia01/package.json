@@ -1,0 +1,15 @@
+{
+  "name": "webpack-01",
+  "version": "1.0.0",
+  "description": "自动刷新版",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KoumuKing",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
