@@ -1,0 +1,40 @@
+webpack应用
+
+
+单页面应用
+
+1、创建目录
+2、npm init 初始化项目
+3、cnpm install webpack webpack-dev-server --save-dev  安装依赖
+4、在dist目录创建index.html，链接bundle.js文件
+5、创建webpack.config.js文件：
+
+
+//基本的webpack.config.js配置
+	1、自动刷新
+const path = require('path');
+var webpack = require("webpack");
+module.exports={
+	entry:
+	[
+		'webpack/hot/dev-server',
+        'webpack-dev-server/client?http://localhost:8080',
+		path.resolve(__dirname, './src/main.js'),
+     ],
+	output:{
+		path: path.resolve(__dirname, "./dist"),
+		filename:"bundel.js",
+		publicPath: "/"
+	},
+	plugins: [
+        new webpack.HotModuleReplacementPlugin()
+        ],
+	devServer: {
+        contentBase : './dist/',
+        host: 'localhost', //这里要是本地是IP地址。
+        port: '8080',
+        // color : true,
+        // hot: false,
+        // inline: true
+    }
+ };
