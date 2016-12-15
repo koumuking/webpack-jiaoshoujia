@@ -9,6 +9,7 @@
   "author": "KoumuKing",
   "license": "MIT",
   "devDependencies": {
+    "html-webpack-plugin": "^2.24.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   }
